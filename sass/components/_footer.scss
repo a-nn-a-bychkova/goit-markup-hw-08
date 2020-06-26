@@ -1,0 +1,100 @@
+/*footer*/
+
+.footer-section {
+  display: block;
+  padding-top: 0;
+  padding-bottom: 60px;
+  margin-left: 0;
+  margin-right: 0;
+
+  color: $primaryWhiteColor;
+  background: $footerBackground;
+  padding-top: 56px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-contacts {
+  margin-top: -8px;
+  margin-right: 69px;
+}
+
+.googlemaps {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-size: 14px;
+  line-height: 2;
+  color: $primaryWhiteColor;
+}
+
+.contacts {
+  &__email {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 2;
+    color: $footerContacts;
+    margin-bottom: 9px;
+  }
+
+  &__info {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 2;
+    color: $footerContacts;
+  }
+
+  &__email {
+    margin-bottom: 9px;
+  }
+}
+
+.join-container {
+  margin-right: 94px;
+}
+
+.join-text {
+  display: block;
+  margin-bottom: 21px;
+}
+
+.subscribe {
+  max-width: 570px;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    display: block;
+    margin-bottom: 21px;
+  }
+  &__label {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  &__icon {
+    margin-left: 10px;
+    fill: $primaryWhiteColor;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.footer__input {
+  width: 358px;
+  height: 50px;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: inherit;
+  &:focus {
+    outline: none;
+    color: $primaryWhiteColor;
+  }
+}

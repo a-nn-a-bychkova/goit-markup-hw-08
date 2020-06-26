@@ -1,0 +1,99 @@
+.header-container {
+  @include centeredFlex();
+}
+
+.nav-container {
+  @include centeredFlex();
+}
+
+.site-nav {
+  @include centeredFlex();
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .link {
+  display: block;
+
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $titleTextColor;
+  &:hover,
+  &:focus {
+    color: $accentColor;
+  }
+
+  &.current {
+    color: $accentColor;
+    position: relative;
+  }
+
+  &.current::after {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: $accentColor;
+
+    border-radius: 2px;
+  }
+}
+
+/*header-address*/
+
+.contact-info {
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $primaryTextColor;
+}
+
+.contacts-header {
+  display: flex;
+}
+
+.contacts-header__link {
+  @include centeredFlex();
+
+  color: $primaryTextColor;
+  fill: $primaryTextColor;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $accentColor;
+    fill: $accentColor;
+  }
+}
+
+.contacts-header .item + .item {
+  margin-left: 30px;
+}
+
+.icon-envelope {
+  margin-right: 10px;
+  fill: inherit;
+  width: 16px;
+  height: 11.2px;
+}
+
+.icon-phone {
+  margin-right: 10px;
+  fill: inherit;
+  width: 10px;
+  height: 14.94px;
+}

@@ -1,0 +1,22 @@
+.nav__logo {
+  white-space: nowrap;
+  margin-right: 85px;
+  color: $accentColor;
+  font-family: Raleway, sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.2;
+}
+
+.footer__logo {
+  @extend.nav__logo;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.nav__studio {
+  color: $titleTextColor;
+  &--white {
+    color: $primaryWhiteColor;
+  }
+}

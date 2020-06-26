@@ -1,0 +1,36 @@
+.our-clients-container {
+  display: block;
+}
+
+.our-clients-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients__list {
+  @include centeredFlex();
+  cursor: pointer;
+}
+
+.clients__link {
+  @include centeredFlex();
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  fill: #afb1b8;
+
+  &:hover {
+    border: 1px solid $accentColor;
+    fill: $accentColor;
+  }
+}
+
+.clients__item + .clients__item {
+  margin-left: 30px;
+}
+
+.clients__logo {
+  fill: inherit;
+}
