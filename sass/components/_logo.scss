@@ -1,22 +1,33 @@
-.nav__logo {
+.company-logo {
+  display: block;
   white-space: nowrap;
-  margin-right: 85px;
+
   color: $accentColor;
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
+
+  @media screen and (min-width: $mobile) {
+    margin-right: 81px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-size: 26px;
+    margin-right: 85px;
+  }
 }
 
-.footer__logo {
-  @extend.nav__logo;
-  display: block;
-  margin-bottom: 10px;
-}
-
-.nav__studio {
+.company-logo__text {
   color: $titleTextColor;
   &--white {
     color: $primaryWhiteColor;
   }
+}
+
+.footer__logo {
+  @extend.company-logo;
+  display: block;
+  margin-bottom: 10px;
+  margin-right: 0;
 }
