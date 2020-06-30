@@ -39,11 +39,11 @@
     background-image: url('../images/index-images/hero-img-mobile@2x.jpg');
   }
 
-  @media screen and (min-device-pixel-ratio: 3),
-    screen and (-webkit-min-device-pixel-ratio: 3),
-    screen and (-o-min-device-pixel-ratio: 3/1),
-    screen and (min-resolution: 3dppx),
-    screen and (min-resolution: 288dpi) {
+  @media screen and (min-width: $mobile) and (min-device-pixel-ratio: 3),
+    screen and (min-width: $mobile) and (-webkit-min-device-pixel-ratio: 3),
+    screen and (min-width: $mobile) and (-o-min-device-pixel-ratio: 3/1),
+    screen and (min-width: $mobile) and (min-resolution: 3dppx),
+    screen and (min-width: $mobile) and (min-resolution: 288dpi) {
     background-image: url('../images/index-images/hero-img-mobile@3x.jpg');
   }
 
