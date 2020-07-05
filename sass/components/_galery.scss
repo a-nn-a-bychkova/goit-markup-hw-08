@@ -26,6 +26,7 @@
   }
 
   &__name {
+    white-space: nowrap;
     margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
@@ -95,6 +96,7 @@
 
   .examples {
     margin-right: 30px;
+    margin-left: 0;
     width: 354px;
     height: 294px;
   }

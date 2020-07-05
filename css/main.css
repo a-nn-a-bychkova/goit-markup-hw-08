@@ -1058,8 +1058,6 @@ h6 {
   .what-we-do.section {
     display: block;
     padding-top: 0;
-    border-top: 1px solid #ececec;
-    background-color: teal;
   }
   .what-we-do-container {
     display: block;
@@ -1630,6 +1628,7 @@ h6 {
 }
 
 .examples__name {
+  white-space: nowrap;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
@@ -1705,6 +1704,7 @@ h6 {
   }
   .examples {
     margin-right: 30px;
+    margin-left: 0;
     width: 354px;
     height: 294px;
   }
