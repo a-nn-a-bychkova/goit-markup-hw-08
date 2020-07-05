@@ -28,6 +28,8 @@
 .footer__logo {
   @extend.company-logo;
   display: block;
-  margin-bottom: 10px;
+
+  margin-bottom: 20px;
+  // margin-bottom: 10px;
   margin-right: 0;
 }

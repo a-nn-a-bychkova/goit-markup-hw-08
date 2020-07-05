@@ -1,0 +1,102 @@
+.team-section {
+  background: #f5f4fa;
+}
+
+.our-team-container {
+  display: block;
+  & .title {
+    margin-bottom: 50px;
+  }
+}
+
+.members {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  &-card {
+    display: block;
+    max-width: 450px;
+    padding-bottom: 24px;
+
+    background-color: $primaryWhiteColor;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+  }
+
+  &-card + &-card {
+    margin-top: 30px;
+  }
+
+  &-card:first-child {
+    margin-top: 0;
+  }
+
+  &-picture {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  &-name,
+  &-profession {
+    font-size: 16px;
+    line-height: 1.19;
+  }
+
+  &-name {
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &-profession {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .members {
+    @include centeredFlex;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+
+  .members-card.item {
+    display: block;
+    width: 354px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  .members-card:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .members-card:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+
+  .members-card + .members-card {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .members {
+    flex-wrap: nowrap;
+  }
+  .members-card.item {
+    width: calc((100%-4 * 30px) / 4);
+    max-width: 270px;
+
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .members-card + .members-card {
+    margin-right: 0;
+    margin-left: 30px;
+  }
+}

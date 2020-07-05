@@ -1,7 +1,12 @@
 .backdrop {
   position: fixed;
   @include centeredFlex(inline-flex);
+  z-index: 2;
 
+  padding-left: 15px;
+  padding-right: 15px;
+
+  padding-top: 93px;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,8 +28,8 @@
 
   padding: 40px;
 
-  min-width: 450px;
-  max-height: 609px;
+  max-width: 450px;
+  min-height: 609px;
 
   visibility: visible;
   opacity: 1;

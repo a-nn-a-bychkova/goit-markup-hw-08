@@ -1,5 +1,6 @@
 .hero {
   position: relative;
+  z-index: 1;
   max-width: 480px;
   min-height: 400px;
   margin-left: auto;
@@ -9,20 +10,20 @@
 
   background-repeat: no-repeat;
   background-color: $footerBackground;
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      right top,
-      from(rgba(47, 48, 58, 0.8)),
-      to(rgba(47, 48, 58, 0.8))
-    ),
-    url('../images/index-images/hero-img-mobile.jpg');
-  background-image: -o-linear-gradient(
-      left,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url('../images/index-images/hero-img-mobile.jpg');
+  // background-image: -webkit-gradient(
+  //     linear,
+  //     left top,
+  //     right top,
+  //     from(rgba(47, 48, 58, 0.8)),
+  //     to(rgba(47, 48, 58, 0.8))
+  //   ),
+  //   url('../images/index-images/hero-img-mobile.jpg');
+  // background-image: -o-linear-gradient(
+  //     left,
+  //     rgba(47, 48, 58, 0.8),
+  //     rgba(47, 48, 58, 0.8)
+  //   ),
+  // url('../images/index-images/hero-img-mobile.jpg');
   background-image: linear-gradient(
       to right,
       rgba(47, 48, 58, 0.8),
@@ -62,20 +63,6 @@
   screen and (min-width: $mobile) and (min-resolution: 192dpi),
   screen and (min-width: $mobile) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-mobile@2x.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-mobile@2x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -92,20 +79,6 @@
   screen and (min-width: $mobile) and (min-resolution: 3dppx),
   screen and (min-width: $mobile) and (min-resolution: 288dpi) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-mobile@3x.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-mobile@3x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -119,20 +92,7 @@
   .hero {
     max-width: 768px;
     min-height: 400px;
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-tablet.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-tablet.jpg');
+
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -149,20 +109,6 @@
   screen and (min-width: $tablet) and (min-resolution: 192dpi),
   screen and (min-width: $tablet) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-tablet.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-mobile@2x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -178,20 +124,6 @@
   screen and (min-width: $tablet) and (min-resolution: 3dppx),
   screen and (min-width: $tablet) and (min-resolution: 288dpi) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-tablet@3x.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-tablet@3x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -206,23 +138,11 @@
     max-width: 1600px;
     min-height: 600px;
 
+    padding-top: 200px;
+
     font-size: 44px;
     line-height: 1.36;
 
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-desktop.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-desktop.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -237,20 +157,6 @@
   screen and (min-width: $desktop) and (min-resolution: 192dpi),
   screen and (min-width: $desktop) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-desktop@2x.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-desktop@2x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),
@@ -266,20 +172,6 @@
   screen and (min-width: $desktop) and (min-resolution: 3dppx),
   screen and (min-width: $desktop) and (min-resolution: 288dpi) {
   .hero {
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        from(rgba(47, 48, 58, 0.8)),
-        to(rgba(47, 48, 58, 0.8))
-      ),
-      url('../images/index-images/hero-img-desktop@3x.jpg');
-    background-image: -o-linear-gradient(
-        left,
-        rgba(47, 48, 58, 0.8),
-        rgba(47, 48, 58, 0.8)
-      ),
-      url('../images/index-images/hero-img-desktop@3x.jpg');
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.8),

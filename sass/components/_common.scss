@@ -19,7 +19,7 @@ html {
   padding-top: 60px;
   padding-bottom: 60px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: $desktop) {
     padding-top: 94px;
     padding-bottom: 94px;
   }
@@ -33,6 +33,9 @@ html {
 
   @media screen and (min-width: $tablet) {
     display: flex;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 1200px;
   }
 }
 
@@ -57,7 +60,7 @@ html {
 
 img {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
 }
 
@@ -68,7 +71,6 @@ h4,
 h5,
 h6 {
   color: $titleTextColor;
-
 }
 
 .upper {

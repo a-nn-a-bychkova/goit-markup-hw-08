@@ -2,24 +2,16 @@
   margin-left: auto;
   margin-right: auto;
 
-  & .link {
-    display: block;
-
-    min-width: 450px;
-    max-height: 120px;
-    margin-bottom: 30px;
-  }
-
   &__title {
     text-align: center;
     margin-bottom: 10px;
     font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    line-height: 1.14;
     letter-spacing: 0.06em;
   }
 
   &__text {
+    text-align: initial;
     padding: 0;
     margin: 0;
     font-size: 14px;
@@ -27,42 +19,86 @@
   }
 }
 
-@media screen and (min-width: $ablet) {
-  .advantages {
-    display: flex;
-  }
-}
-
 .advantages__item {
   display: block;
-
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0;
-  max-width: 450px;
+
   min-height: 226px;
 
   &:not(:last-child) {
     margin-bottom: 30px;
   }
-}
 
-@media screen and (min-width: $tablet) {
-  .advantages__item {
-    max-width: 354px;
-    min-height: 251px;
+  & .link {
+    display: block;
+
+    max-height: 120px;
+    margin-bottom: 30px;
   }
 }
 
 .advantages__rectangle {
-  display: inline-block;
-  text-align: center;
-  width: 100%;
+  display: flex;
+
+  max-height: 120px;
   padding-top: 25px;
   padding-bottom: 25px;
   background: #f5f4fa;
   border-radius: 4px;
+}
 
-  & .icon {
-    width: 70px;
-    height: 70px;
+.advantages__rectangle > .icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70px;
+  height: 70px;
+}
+
+@media screen and (min-width: $tablet) {
+  .advantages {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .advantages__item {
+    display: block;
+    max-width: 354px;
+    box-sizing: border-box;
+
+    margin-bottom: 30px;
+    text-align: initial;
+  }
+
+  .advantages__item:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  .advantages__item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .advantages {
+    flex-wrap: nowrap;
+  }
+  .advantages__item {
+    width: calc((100%-4 * 30px) / 4);
+    height: 120px;
+
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  .advantages__item + .advantages__item {
+    margin-left: 30px;
+  }
+
+  .advantages__rectangle {
+    max-width: 270px;
   }
 }
