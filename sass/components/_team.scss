@@ -4,17 +4,28 @@
 
 .our-team-container {
   display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   & .title {
     margin-bottom: 50px;
   }
 }
 
 .members {
-  display: block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 0;
+  @media screen and (min-width: $tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $desktop) {
+    flex-wrap: nowrap;
+  }
+
   &-card {
     display: block;
     max-width: 450px;
@@ -24,14 +35,43 @@
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
     border-radius: 4px;
+
+    @media screen and (min-width: $tablet) {
+      max-width: 354px;
+
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 270px;
+
+      margin-bottom: 0;
+    }
   }
 
   &-card + &-card {
     margin-top: 30px;
+    @media screen and (min-width: $tablet) {
+      margin-top: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 0;
+      margin-left: 30px;
+    }
   }
 
   &-card:first-child {
     margin-top: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    &-card:nth-child(2n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
 
   &-picture {
@@ -53,50 +93,5 @@
   &-profession {
     margin-top: 0;
     margin-bottom: 16px;
-  }
-}
-
-@media screen and (min-width: $tablet) {
-  .members {
-    @include centeredFlex;
-    margin-left: auto;
-    margin-right: auto;
-    flex-wrap: wrap;
-  }
-
-  .members-card.item {
-    display: block;
-    width: 354px;
-    margin-right: 30px;
-    margin-bottom: 30px;
-  }
-
-  .members-card:nth-child(2n) {
-    margin-right: 0;
-  }
-
-  .members-card:nth-last-child(-n + 2) {
-    margin-bottom: 0;
-  }
-
-  .members-card + .members-card {
-    margin-top: 0;
-  }
-}
-
-@media screen and (min-width: $desktop) {
-  .members {
-    flex-wrap: nowrap;
-  }
-  .members-card.item {
-    width: calc((100%-4 * 30px) / 4);
-    max-width: 270px;
-
-    margin-right: 0;
-    margin-bottom: 0;
-  }
-  .members-card + .members-card {
-    margin-right: 0;
-    margin-left: 30px;
   }
 }
